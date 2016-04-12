@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManagedExtension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MoveToTop">
+  <AdminPage />
+  <Author>ReviewResults.in</Author>
+  <Description>Creates a Scroll To Top button widget.</Description>
+  <Enabled>true</Enabled>
+  <Priority>1</Priority>
+  <SubBlogEnabled>true</SubBlogEnabled>
+  <ShowSettings>true</ShowSettings>
+  <Version>3.0.0.1</Version>
+</ManagedExtension>

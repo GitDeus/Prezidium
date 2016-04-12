@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<categories>
+    <category id="19770e74-9ec9-4cde-b2ab-e5051aaaf348" description="Интересное и популярные новости" parent="">Интересное</category>
+    <category id="c223353c-1aef-4a46-afd1-cb61ab1a792d" description="Образцы - заявлений" parent="">Образцы</category>
+</categories>

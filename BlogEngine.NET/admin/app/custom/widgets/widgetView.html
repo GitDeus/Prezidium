@@ -1,0 +1,79 @@
+﻿<div class="custom-widgets-view" data-ng-controller="CustomWidgetsController">
+    <div class="modal fade" id="edit-widget" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeEditForm()"><i class="fa fa-times"></i></button>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" placeholder="{{lbl.name}}" class="form-control" id="txtWidgetTitle" name="txtWidgetTitle" value="xxx" />
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="updateTitle()">Change Name</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <iframe id="settingsFrame" ng-src="{{editSrc}}"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-header clearfix">
+        <h2 class="page-title pull-left">{{lbl.widgets}}</h2>
+        <button type="button" ng-click="save()" class="btn btn-success btn-sm btn-hasicon pull-left"><i class="fa fa-check"></i>{{lbl.save}}</button>
+    </div>
+    <div class="content-inner">
+        <div class="row">
+            <div class="col-sm-2">
+                <h4>Available Widgets</h4>
+                <ul class="widgets-list">
+                    <li class="draggable" ng-repeat="iw in vm.AvailableWidgets" draggable="iw" draggable-target=".sortable">{{ iw.Title }}</li>
+                </ul>
+            </div>
+            <div class="col-sm-10" id="w-zones">
+                <div class="row">
+                    <div class="col-sm-4" ng-if="widgetZones.titles && widgetZones.titles.length > 0">
+                        <h4>Widget Zone <span>({{widgetZones.titles[0]}})</span></h4>
+                        <ul class="sortable widgets-list widgets-list-active" droppable="widgetZones.list1" ng-move="moveObject(from, to, fromList, toList)" ng-create="createObject(object, to, list)" id="list1">
+                            <li ng-if="widgetZones.list1.length < 1" class="sortable-empty">Drag widget here</li>
+                            <li class="ui-state-default" ng-repeat="item in widgetZones.list1 track by item.Id">
+                                {{item.Title}}
+                                <div class="item-buttons">
+                                    <button ng-click="loadEditForm(item.Id, item.Name, item.Title, widgetZones.titles[0])" title="{{lbl.edit}}"><i class="fa fa-pencil"></i></button>
+                                    <button ng-click="deleteItem(item.Id, widgetZones.list1, widgetZones.titles[0])" title="{{lbl.remove}}"><i class="fa fa-trash"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4" ng-if="widgetZones.titles && widgetZones.titles.length > 1">
+                        <h4>Widget Zone <span>({{widgetZones.titles[1]}})</span></h4>
+                        <ul class="sortable widgets-list widgets-list-active" droppable="widgetZones.list2" ng-move="moveObject(from, to, fromList, toList)" ng-create="createObject(object, to, list)" id="list2">
+                            <li ng-if="widgetZones.list2.length < 1" class="sortable-empty">Drag widget here</li>
+                            <li class="ui-state-default" ng-repeat="item in widgetZones.list2 track by item.Id">
+                                {{ item.Title }}
+                                <div class="item-buttons">
+                                    <button ng-click="loadEditForm(item.Id, item.Name, item.Title, widgetZones.titles[1])" title="{{lbl.edit}}"><i class="fa fa-pencil"></i></button>
+                                    <button ng-click="deleteItem(item.Id, widgetZones.list2, widgetZones.titles[1])" title="{{lbl.remove}}"><i class="fa fa-trash"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4" ng-if="widgetZones.titles && widgetZones.titles.length > 2">
+                        <h4>Widget Zone <span>({{widgetZones.titles[2]}})</span></h4>
+                        <ul class="sortable widgets-list widgets-list-active" droppable="widgetZones.list3" ng-move="moveObject(from, to, fromList, toList)" ng-create="createObject(object, to, list)" id="list3">
+                            <li ng-if="widgetZones.list3.length < 1" class="sortable-empty">Drag widget here</li>
+                            <li class="ui-state-default" ng-repeat="item in widgetZones.list3 track by item.Id">
+                                {{ item.Title }}
+                                <div class="item-buttons">
+                                    <button ng-click="loadEditForm(item.Id, item.Name, item.Title, widgetZones.titles[2])" title="{{lbl.edit}}"><i class="fa fa-pencil"></i></button>
+                                    <button ng-click="deleteItem(item.Id, widgetZones.list3, widgetZones.titles[2])" title="{{lbl.remove}}"><i class="fa fa-trash"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

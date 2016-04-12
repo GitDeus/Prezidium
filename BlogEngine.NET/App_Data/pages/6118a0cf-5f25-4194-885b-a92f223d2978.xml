@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<page>
+  <title>Популярное</title>
+  <description>Популярное</description>
+  <content>&lt;p&gt;9&lt;/p&gt;</content>
+  <keywords />
+  <slug>Популярное</slug>
+  <parent>00000000-0000-0000-0000-000000000000</parent>
+  <isfrontpage>False</isfrontpage>
+  <showinlist>False</showinlist>
+  <ispublished>True</ispublished>
+  <isdeleted>True</isdeleted>
+  <sortorder>0</sortorder>
+  <datecreated>2016-04-06 17:52:00</datecreated>
+  <datemodified>2016-04-08 19:07:35</datemodified>
+</page>

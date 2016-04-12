@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManagedExtension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Jcarousel">
+  <AdminPage>~/Custom/Controls/Jcarousel/Admin.aspx</AdminPage>
+  <Author>&lt;a href="http://rtur.net"&gt;Rtur.net&lt;/a&gt;</Author>
+  <Description>Allows to save and display images in a carousel-like fashion.</Description>
+  <Enabled>true</Enabled>
+  <Priority>0</Priority>
+  <SubBlogEnabled>true</SubBlogEnabled>
+  <Settings>
+    <Delimiter>44</Delimiter>
+    <Help />
+    <Hidden>false</Hidden>
+    <Index>0</Index>
+    <IsScalar>false</IsScalar>
+    <KeyField>Album</KeyField>
+    <Name>Jcarousel</Name>
+    <Parameters>
+      <KeyField>false</KeyField>
+      <Label>Album</Label>
+      <MaxLength>100</MaxLength>
+      <Name>Album</Name>
+      <ParamType>String</ParamType>
+      <Required>false</Required>
+      <SelectedValue />
+      <Values>Album1:img1.jpg</Values>
+      <Values>Album1:img2.jpg</Values>
+      <Values>Album1:img3.jpg</Values>
+      <Values>Album1:img4.jpg</Values>
+      <Values>Основной:azurewindow_en-us8843630428_1920x1200.jpg</Values>
+    </Parameters>
+    <Parameters>
+      <KeyField>false</KeyField>
+      <Label>Title</Label>
+      <MaxLength>100</MaxLength>
+      <Name>Title</Name>
+      <ParamType>String</ParamType>
+      <Required>false</Required>
+      <SelectedValue />
+      <Values />
+      <Values>sample two</Values>
+      <Values />
+      <Values>sample four</Values>
+      <Values>фото</Values>
+    </Parameters>
+    <ShowAdd>true</ShowAdd>
+    <ShowDelete>true</ShowDelete>
+    <ShowEdit>true</ShowEdit>
+    <BlogId>96d5b379-7e1d-4dac-a6ba-1e50db561b04</BlogId>
+  </Settings>
+  <ShowSettings>true</ShowSettings>
+  <Version>3.2.0.0</Version>
+</ManagedExtension>
